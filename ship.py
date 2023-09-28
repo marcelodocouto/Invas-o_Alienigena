@@ -13,7 +13,7 @@ class Ship:
         self.rect = self.image.get_rect()
 
         # Começa cada espaçonave nova no centro da tela
-        self.rect.midbottom = self.screen_rect.midbottom
+        self.rect.centery= self.screen_rect.centery
 
     def blitme(self):
         """Desenha a espaçonave em sua localização atual"""
