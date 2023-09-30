@@ -17,10 +17,19 @@ class Ship:
 
         # flag de movimento ; começa com a espaçonave que não esta se movendo
         self.moving_right = False
+        self.moving_Left = False
+        self.moving_up = False
+        self.moving_down = False
     
     def update(self):
         if self.moving_right:
             self.rect.x +=1
+        elif self.moving_Left:
+            self.rect.x -=1
+        elif self.moving_up:
+            self.rect.y -=1
+        elif self.moving_down:
+            self.rect.y +=1
 
     def blitme(self):
         """Desenha a espaçonave em sua localização atual"""
