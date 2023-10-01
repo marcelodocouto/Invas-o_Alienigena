@@ -5,5 +5,8 @@ class Settings:
         # Configurações da tela
         self.screen_width = 1200
         self.screen_height = 650
-        self.bg_color = (135, 206, 235)
+        self.bg_color = (0, 0, 50)
+
+        # Configurções da espaçonave
+        self.ship_speed = 5
     
