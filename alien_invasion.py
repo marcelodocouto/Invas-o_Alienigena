@@ -27,6 +27,12 @@ class AlienInvasion:
             self._check_evets()
             self.ship.update()
             self.bullets.update()
+            
+            # Descarta projeteis que desaparecem
+            for bullet in self.bullets.copy():
+                if bullet.rect.left > self.settings.screen_width:
+                    self.bullets.remove(bullet)
+                print(len(self.bullets))
             self._update_screen()
             self.clock.tick(60)
 
