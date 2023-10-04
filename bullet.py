@@ -1,6 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
+
 class Bullet(Sprite):
     """Classe apara gerencio os projeteis disparados da espaçonave"""
 
@@ -12,19 +13,19 @@ class Bullet(Sprite):
         self.color = self.settings.bullet_color
 
         # Cria um bullet rerct em (0,0) e, em seguida define a pisição correta
-        self.rect = pygame.Rect(0,0, self.settings.bullet_heigth,
-                                self.settings.bullet_width)
-        self.rect.midright = ai_game.ship.rect.midright
+        self.rect = pygame.Rect(0,0, self.settings.bullet_width,
+                                self.settings.bullet_heigth)
+        self.rect.midtop = ai_game.ship.rect.midtop
 
         # Armazena a posiçãodo projetil como um float
-        self.x = float(self.rect.x)
+        self.y = float(self.rect.y)
 
     def update(self):
             """Desloca o projetio verticalmente pela tela"""
             # Atualiza a posição exat do projetil
-            self.x += self.settings.bullet_speed
+            self.y -= self.settings.bullet_speed
             # Atualiza a posição do rect
-            self.rect.x = self.x
+            self.rect.y = self.y
 
     def draw_bullet(self):
             """Desenha o projetil na tela"""

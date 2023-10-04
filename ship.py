@@ -15,7 +15,7 @@ class Ship:
         self.rect = self.image.get_rect()
 
         # Começa cada espaçonave nova no centro do canto esquerdo
-        self.rect.centery= self.screen_rect.centery
+        self.rect.midbottom= self.screen_rect.midbottom
 
         # Armazena um float para posição exata da espaçonave
         self.x = float(self.rect.x)
